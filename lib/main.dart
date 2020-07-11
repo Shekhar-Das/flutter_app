@@ -7,17 +7,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text("Home Page"),
-          centerTitle: true,
-          leading: Icon(Icons.message),
-          actions: <Widget>[
-            IconButton(
-              icon: Icon(Icons.add_a_photo),
-              onPressed: () {},
-            )
-          ],
+      home: SafeArea(
+        child: Scaffold(
+         body: Container(
+           height: 200,
+           width: 300,
+           decoration: BoxDecoration(color: Colors.deepOrange),
+           child: Text("I Love coding",style: TextStyle(fontSize: 30),),
+         ),
         ),
       ),
     );
